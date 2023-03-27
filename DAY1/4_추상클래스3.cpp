@@ -13,28 +13,25 @@ public:
 };
 
 
+// 진짜 카메라는 없지만 규칙이 있으므로
+// 사용자는 규칙대로만 사용하면 됩니다.
+class People
+{
+public:
+	void useCamera(ICamera* p) { p->take(); }
+};
 
-
-
-
-
-class Camera
+// 모든 카메라는 규칙을 지켜야 합니다.
+class Camera : public ICamera
 {
 public:
 	void take() { std::cout << "Take Picture" << std::endl; }
 };
 
-class HDCamera
+class HDCamera : public ICamera
 {
 public:
 	void take() { std::cout << "Take HD Picture" << std::endl; }
-};
-
-class People
-{
-public:
-	void useCamera(Camera* p) { p->Take(); }
-	void useCamera(HDCamera* p) { p->Take(); }
 };
 
 int main()
