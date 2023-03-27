@@ -10,11 +10,25 @@
 
 class Shape
 {
+	int color;
 public:
 	virtual ~Shape() {}
 
+	// 아래 함수는 가상으로 할까요? 비가상으로 할까요?
+	// => 파생 클래스가 재정의 할 이유 없다. 비가상
+	void setColor(int c) { color = c; }
+
+	// 모든 도형은 면적을 구하는 방법은 다르다.
+	// => 파생 클래스가 재정의 해야 한다.
+	virtual int getArea() { return -1; }
+
+
 	virtual void draw() { std::cout << "draw shape" << std::endl; }
 };
+
+
+
+
 
 class Rect : public Shape
 {
