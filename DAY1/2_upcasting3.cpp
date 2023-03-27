@@ -5,7 +5,15 @@ class Animal
 {
 public: 
 	int age;
+
+	// dynamic_cast 를 사용하려면
+	// "가상함수가 있는 타입" 이어야 합니다.
+	// => 모든 기반 클래스의 소멸자는 가상함수이어야 한다!! 라는 규칙이
+	//    있으므로 상속을 사용하는 클래스는 모두 가상함수가 있습니다.
+	virtual ~Animal() {}
 };
+
+
 class Cat : public Animal 
 {
 };
@@ -36,6 +44,7 @@ void NewYear(Animal* p) // 모든 동물을 인자로 받을수있는함수
 
 	std::cout << pDog << std::endl;
 }
+
 
 
 int main()
