@@ -8,11 +8,19 @@ public:
 class Derived : public Base
 {
 public:
-	Derived()  { std::cout << "Derived() ÀÚ¿øÇÒ´ç" << std::endl; }
-	~Derived() { std::cout << "~Derived() ÀÚ¿øÇØÁö" << std::endl; }
+	Derived()  { std::cout << "Derived() ìì›í• ë‹¹" << std::endl; }
+	~Derived() { std::cout << "~Derived() ìì›í•´ì§€" << std::endl; }
 };
 int main()
 {
-	Derived d;
+	//Derived d;
+
+	Derived* p = new Derived;
+	delete p;
 
 }	
+
+
+
+
+
