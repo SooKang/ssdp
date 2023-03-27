@@ -1,6 +1,9 @@
 //생성자1.cpp - 3page
 #include <iostream>
 
+// 핵심 : 상속에서의 생성자 호출의 원리!
+// => 컴파일러가 아래 처럼 코드를 추가해 주는것 
+
 class Base
 {
 public:
@@ -23,7 +26,6 @@ public:
 	~Derived()		
 	{ 
 		std::cout << "~Derived()" << std::endl; 
-
 		// ~Base();		// 기반 클래스 소멸자 호출하는 코드를 컴파일러가추가
 	}
 };
