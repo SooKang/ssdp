@@ -28,12 +28,14 @@ int main()
 
 		else if (cmd == 9)
 		{
-			for (auto p : v)
-				p->draw();
+			for (auto p : v)		// p 는 Shape* 인데
+				p->draw(); // error, Shape 에는 draw()가 없다
 		}
 	}
 }
 // 위 코드는 왜?? 에러일까요 ?
 // 해결책은 뭘까요??
+// 1. p 를 Shape* 가 아닌 Rect 나 Circle로 캐스팅하자.
+// 2. Shape에도 draw 를 만들자
 
 
