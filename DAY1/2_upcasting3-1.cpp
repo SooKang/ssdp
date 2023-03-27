@@ -20,10 +20,15 @@ public:
 void NewYear(Animal* p) 
 {
 	++(p->age);
+}
 
-	Dog* pDog = dynamic_cast<Dog*>(p);
+void NewYear(Dog* p)
+{
+	// 공통의 작업 수행후
+	NewYear(static_cast<Animal*>(p) );
 
-	std::cout << pDog << std::endl;
+	// dog 전용 작업 수행
+	p->color = 10;
 }
 
 
