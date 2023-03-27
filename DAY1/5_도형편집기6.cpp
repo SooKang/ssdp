@@ -1,6 +1,24 @@
 #include <iostream>
 #include <vector>
 
+// 핵심 6. 리팩토링의 유명한 용어 입니다. 잘 생각해 보세요
+
+//		"Replace Conditional With Polymorphism"
+//				 (제어문)			(다형성)
+//			if, switch	=> 가상함수 로 변경
+
+
+// 핵심 7. 디자인 패턴이란 ?
+// => 다양한 오픈소스가 사용하던 공통된 코딩기법에 이름을 부여 한것
+// => 1994년 4명의 개발자가 쓴 "GoF's 디자인 패턴" 책
+// 
+// => 전형적인 코딩 기법에 이름을 부여, 23개의 이름
+
+// 핵심 8. prototype 패턴
+// => 견본을 만들고, 복제를 통한 객체 생성
+// => clone()가상함수
+
+
 class Shape
 {
 	int color;
